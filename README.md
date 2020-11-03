@@ -34,7 +34,7 @@ In order to run this benchmark, make sure have met the following criteria
    chmod 700 /pg_data /pg_indexes /pg_wal
    ```
  
-  Example of mounting volumes to the respective directory is given below:
+  Examples of mounting volumes to the respective directory is given below:
    ```
    mount /dev/nvme7n1 /pg_data
    mount /dev/nvme6n1 /pg_wal
@@ -42,8 +42,3 @@ In order to run this benchmark, make sure have met the following criteria
    ```
  
 ### Installating the tpcb_benchmark_m5d_metal
- 
-
-  
-  
-
