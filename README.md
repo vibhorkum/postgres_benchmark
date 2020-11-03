@@ -6,7 +6,7 @@ tpcb_benchmark_m5d_metal is for performing benchmark on AWS instance type m5d.me
 
 ### Assumptions/Pre-requisite
 
-In order to run this benchmark, make sure have met the following criteria
+To run this benchmark, make sure have met the following criteria:
 
 1. Provision m5d.metal instance with CentOS 8 x86_64
 
@@ -17,15 +17,15 @@ In order to run this benchmark, make sure have met the following criteria
     * volume_type: io2, Provisioned IOPs: 20000, Name: pg_indexes
     * volume_type: io2, Provisioned IOPs: 10000, Name: pg_wal
     
-    For creating volumes, please refer following link:
+    For creating volumes, please refer to the following link:
     
     https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html
    
-3. Attach the volumes to the instance created, the following link gives information on how to attach a provisioned volumes:
+3. Attach the volumes to the instance created. The following link gives information on how to attach a provisioned volumes:
 
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html
 
-4. After attaching the volume use following commands to make it available for use. Following link can be use for making it available on VM:
+4. After attaching the volume, use the following commands to make it available for use. The following link can be used for making it available on VM:
 
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
    
@@ -45,12 +45,12 @@ In order to run this benchmark, make sure have met the following criteria
 6. Install the `at` package on the RHEL.
  
 ### Installation steps for tpcb_benchmark_m5d_metal
-1. Clone the the repository using git command as given below:
+1. Clone the repository using the git command as given below:
 
     git clone https://github.com/vibhorkum/postgres_benchmark
 
  
-### Usage and configuration for running the benchmark for sepcific version of PostgreSQL/EPAS.
+### Usage and configuration for running the benchmark for a specific version of PostgreSQL/EPAS.
 
  `edb_env.sh` file inside the `tpcb_benchmark_m5d_metal` directory contains all the environment variables.
  For running the benchmark for a specific version, please modify the following:
@@ -68,5 +68,3 @@ After modifying the file, run the following command:
 cd postgres_benchmark/tpcb_benchmark_m5d_metal
 ./main.sh
 ```
-
-
