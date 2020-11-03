@@ -53,7 +53,7 @@ To run this benchmark, make sure have met the following criteria:
 ### Usage and configuration for running the benchmark for a specific version of PostgreSQL/EPAS.
 
  `edb_env.sh` file inside the `tpcb_benchmark_m5d_metal` directory contains all the environment variables.
- For running the benchmark for a specific version, please modify the following:
+ For running the benchmark for a specific version, please modify the following using your favorite editor:
  ```
  PGBIN=/usr/pgsql-12/bin
 PGUSER="postgres"
@@ -68,3 +68,11 @@ After modifying the file, run the following command:
 cd postgres_benchmark/tpcb_benchmark_m5d_metal
 ./main.sh
 ```
+
+### Benchmark results
+
+`tpcb_benchmark_m5d_metal` keeps the consolidated results of all runs of the benchmark in `postgres_benchmark/tpcb_benchmark_m5d_metal/log/consolidated_tps.txt`
+This is a CSV. You can use the excel/google sheet to analyze or plot a graph using the results.
+
+For analyzing or plotting the graph, it is recommended to take the `average` or `median` of each TPS based on the number of connections.
+The sample result of the `consolidated_tps.txt` file is given below:
