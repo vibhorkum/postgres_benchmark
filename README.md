@@ -15,13 +15,17 @@ In order to run this benchmark, make sure have met the following criteria
     * volume_type: io2, Provisioned IOPs: 40000, Name: pg_data
     * volume_type: io2, Provisioned IOPs: 20000, Name: pg_indexes
     * volume_type: io2, Provisioned IOPs: 10000, Name: pg_wal
-   For creating volumes, please refer following link:
-   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html
+    
+    For creating volumes, please refer following link:
+    
+    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html
    
-3. Attach the volumes to the instance created, the following link gives information on how to attach a provisioned volumes
+3. Attach the volumes to the instance created, the following link gives information on how to attach a provisioned volumes:
+
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html
 
-4. After attaching the volume use following commands to make it available for use. Following link can be use for making it available on VM
+4. After attaching the volume use following commands to make it available for use. Following link can be use for making it available on VM:
+
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
    
    Please make sure you have mounted the respective volumes to the following directories
