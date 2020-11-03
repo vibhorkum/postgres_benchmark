@@ -9,6 +9,7 @@ tpcb_benchmark_m5d_metal is for performing benchmark on AWS instance type m5d.me
 In order to run this benchmark, make sure have met the following criteria
 
 1. Provision m5d.metal instance with CentOS 8 x86_64
+
     https://docs.aws.amazon.com/quickstarts/latest/vmlaunch/welcome.html
     
 2. Add three volumes of the following type:
@@ -45,6 +46,7 @@ In order to run this benchmark, make sure have met the following criteria
  
 ### Installation steps for tpcb_benchmark_m5d_metal
 1. Clone the the repository using git command as given below:
+
     git clone https://github.com/vibhorkum/postgres_benchmark
 
  
