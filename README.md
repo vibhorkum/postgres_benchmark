@@ -8,3 +8,38 @@ tpcb_benchmark_m5d_metal is for performing benchmark on AWS instance type m5d.me
 
 In order to run this benchmark, make sure have met the following criteria
 
+1. Provision m5d.metal instance with CentOS 8 x86_64
+    https://docs.aws.amazon.com/quickstarts/latest/vmlaunch/welcome.html
+    
+2. Add three volumes of the following type:
+    * volume_type: io2, Provisioned IOPs: 40000, Name: pg_data
+    * volume_type: io2, Provisioned IOPs: 20000, Name: pg_indexes
+    * volume_type: io2, Provisioned IOPs: 10000, Name: pg_wal
+   For creating volumes, please refer following link:
+   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html
+   
+3. Attach the volumes to the instance created, the following link gives information on how to attach a provisioned volumes
+   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html
+
+4. After attaching the volume use following commands to make it available for use. Following link can be use for making it available on VM
+   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+   
+   Please make sure you have mounted the respective volumes to the following directories
+   ```sudo mkdir -p /pg_data /pg_indexes /pg_wal
+   chown <postgres user>:<postgres user> /pg_data /pg_indexes /pg_wal
+   chmod 700 /pg_data /pg_indexes /pg_wal
+   ```
+ 
+  Example of mounting volumes to the respective directory is given below:
+   ```
+   mount /dev/nvme7n1 /pg_data
+   mount /dev/nvme6n1 /pg_wal
+   mount /dev/nvme5n1 /pg_indexes
+   ```
+ 
+### Installating the tpcb_benchmark_m5d_metal
+ 
+
+  
+  
+
