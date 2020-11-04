@@ -76,3 +76,15 @@ This is a CSV. You can use the excel/google sheet to analyze or plot a graph usi
 
 For analyzing or plotting the graph, it is recommended to take the `average` or `median` of each TPS based on the number of connections.
 The sample result of the `consolidated_tps.txt` file is given below:
+```
+connections,RUN: 1(tps),RUN: 2(tps),RUN: 3(tps)
+1,803.959791,792.497908,797.139589
+16,8694.290789,8615.502609,8671.770535
+32,15479.738718,15471.298318,15483.024795
+64,27685.198173,27563.961374,27624.810339
+128,48062.894395,47811.986569,47531.853078
+256,62411.832806,60984.958269,58934.647526
+512,65300.560351,64930.024937,68794.695218
+550,65968.196023,66199.315905,67655.082280
+600,65502.238015,66213.076733,66517.615646
+```
