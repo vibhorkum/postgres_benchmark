@@ -65,7 +65,7 @@ sudo grubby --update-kernel=ALL --args='transparent_hugepage=never'
 ################################################################################
 
 plog "Changing system control parameters"
-sudo sysctl -w vm.nr_hugepages=52600
-sudo sysctl -w vm.swappiness=1
-sudo sysctl -w vm.max_map_count=3112960
-sudo sysctl -w net.core.somaxconn=1024
+#sudo sysctl -w vm.nr_hugepages=52600
+#sudo sysctl -w vm.swappiness=1
+#sudo sysctl -w vm.max_map_count=3112960
+#sudo sysctl -w net.core.somaxconn=1024
