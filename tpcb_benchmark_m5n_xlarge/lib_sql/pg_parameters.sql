@@ -4,7 +4,7 @@ ALTER SYSTEM SET shared_buffers TO '4096 MB';
 ALTER SYSTEM SET work_mem TO '32 MB';
 ALTER SYSTEM SET maintenance_work_mem TO '420 MB';
 ALTER SYSTEM SET effective_cache_size TO '11 GB';
-ALTER SYSTEM SET huge_pages = off
+ALTER SYSTEM SET huge_pages TO off;
 ALTER SYSTEM SET effective_io_concurrency TO 200;
 ALTER SYSTEM SET wal_level TO replica ;
 ALTER SYSTEM SET max_wal_senders TO 0;
