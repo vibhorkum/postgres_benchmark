@@ -17,14 +17,17 @@ PGPORT=5432
 PGDATABASE=postgres
 PGHOST=/tmp
 
-PGCTL=${PGBIN}/pg_ctl
-INITDB=${PGBIN}/initdb
-PSQL="${PGBIN}/psql -qAt "
+PG_WAL_MOUNT="/pg_wal"
+PG_DATA_MOUNT="/pg_data"
+PG_INDEXES_MOUNT="/pg_indexes"
 
 PGDATA=/pg_data/data
 PGWAL=/pg_wal/wal
 PGINDEXES=/pg_indexes/indexes
 
+PGCTL=${PGBIN}/pg_ctl
+INITDB=${PGBIN}/initdb
+PSQL="${PGBIN}/psql -qAt "
 
 export PGUSER PGPORT PGDATABASE PGHOST PGDATA PSQL
 export PGWAL PGINDEXES INITDB PGBIN PGCTL
@@ -48,7 +51,7 @@ export LIBDIR LIBSQL PGSUDO
 # pgbench specific variables
 ################################################################################
 
-DBSIZE_GB=200
+DBSIZE_GB=100
 NO_OF_RUNS=3
 PGBENCH_CONNECTIONS_LIST="128 1 256 512 16 550 64 32 600"
 DURATION=600
@@ -69,9 +72,6 @@ export PGDATA_BCKUP PGWAL_BCKUP PGINDEXES_BCKUP
 ################################################################################
 # BLOCK devices of PGDATA/PGWAL/PGINDEXES
 ################################################################################
-PG_WAL_MOUNT="/pg_wal"
-PG_DATA_MOUNT="/pg_data"
-PG_INDEXES_MOUNT="/pg_indexes"
 BLCK_DEVICE_PGWAL="/dev/$(lsblk |grep ${PG_WAL_MOUNT}|awk '{print $1}')"
 BLCK_DEVICE_PGDATA="/dev/$(lsblk |grep ${PG_DATA_MOUNT}|awk '{print $1}')"
 BLCK_DEVICE_PGINDEXES="/dev/$(lsblk |grep ${PG_INDEXES_MOUNT}|awk '{print $1}')"
