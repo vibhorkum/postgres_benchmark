@@ -138,14 +138,14 @@ do
        
         # backup the postgresql log file
         sudo mv ${PGDATA}/log/postgresql.log ${LOGDIR}/${run}
-        sudo chown ${USER}:${USER} ${LOGDIR}/${run}/postgresql.log
+        sudo chown ${USER}:${USER} ${LOGDIR}/${run}/postgresql_${threads}.log
 
         restore_pg
         update_pg_parameters
     done
     # consolidate the run tps with connections
     echo "connections,RUN: ${run}(tps)" >${RUN_SUMMARY}
-    for file in $(ls -1 ${LOGDIR}/${run}/*_conn.log|grep -v postgresql.log)
+    for file in $(ls -1 ${LOGDIR}/${run}/*_conn.log|grep -v postgresql)
     do
         echo "$(basename ${file}|cut -d"_" -f1),$(cat ${file} \
                      | grep "including connections" \
