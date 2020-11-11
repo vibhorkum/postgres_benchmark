@@ -22,7 +22,7 @@ source ${SCRIPT_PATH}/lib/edb_funcs.sh
 ################################################################################
 plog "Stopping Postgres if running"
 
-#start_stop_pg stop
+start_stop_pg stop
 
 ################################################################################
 # cleanup the directory
