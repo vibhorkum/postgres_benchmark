@@ -138,7 +138,7 @@ do
        
         # backup the postgresql log file
         sudo mv ${PGDATA}/log/postgresql.log ${LOGDIR}/${run}
-        sudo chown ${USER}:${USER} ${LOGDIR}/${run}/postgresql.log
+        sudo chown ${USER}:${USER} ${LOGDIR}/${run}/postgresql_${threads}.log
 
         restore_pg
         update_pg_parameters
