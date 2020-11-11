@@ -41,8 +41,9 @@ To run this benchmark, make sure have met the following criteria:
    mount /dev/nvme6n1 /pg_wal
    mount /dev/nvme5n1 /pg_indexes
    ```
+   
 5. Install the PostgreSQL/EPAS specific version of binaries. For more information on installing PostgreSQL/EPAS, please refer to the PostgreSQL or EDB website.
-6. Install the `at` and `git` packages on the RHEL.
+6. Install the `at`, `bc`,`vim` and `git` packages on the RHEL.
  
 ### Installation steps for tpcb_benchmark_m5d_metal
 1. Clone the repository using the git command on the `m5d.metal` instance using the following command:
