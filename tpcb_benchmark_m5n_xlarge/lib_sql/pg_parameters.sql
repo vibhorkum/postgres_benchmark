@@ -34,3 +34,4 @@ ALTER SYSTEM SET log_lock_waits TO on;
 ALTER SYSTEM SET log_temp_files TO 0;
 ALTER SYSTEM SET log_autovacuum_min_duration TO 0;
 ALTER SYSTEM SET log_checkpoints TO on;
+ALTER SYSTEM SET shared_preload_libraries TO 'pg_stat_statements';
