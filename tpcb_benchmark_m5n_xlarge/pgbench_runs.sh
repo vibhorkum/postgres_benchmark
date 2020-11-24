@@ -137,7 +137,7 @@ do
         pgbench_steps "${threads}" "${threads}" "${RUN_LOGFILE}"
        
         # backup the postgresql log file
-        sudo mv ${PGDATA}/log/postgresql.log ${LOGDIR}/${run}
+        sudo mv ${PGDATA}/log/postgresql.log ${LOGDIR}/${run}/postgresql_${threads}.log
         sudo chown ${USER}:${USER} ${LOGDIR}/${run}/postgresql_${threads}.log
 
         restore_pg
